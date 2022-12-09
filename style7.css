@@ -1,0 +1,694 @@
+html,
+body {
+    background: url(img/matrix6.jpg);   /*фтото как фон тела  сайта*/
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    color: aliceblue;
+    background-color: #2b2c2f;
+}
+
+.container{                                  /*основной контеейнер*/
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem 1rem;
+    background-color: #202731;
+}
+
+
+.special{                                         /*шрифт*/
+    font-family: 'Bungee Spice', cursive;
+    font-size: 3rem;
+    text-align: center;
+    padding: 0 0 40px 0;
+}
+
+.card {
+    justify-self: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.card__title {
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+.container__cards {                            /*заготовка для карточек*/
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container__card {                         /*по 3 карты*/
+    flex: 0 1 30%;
+    z-index: 1000;
+    position: relative;
+}
+
+
+.container__card-1{                /*карты первого выбора*/
+    padding: 8rem 1rem;
+}
+
+
+.card-1{
+    background-color: rgba(67, 71, 78, 0.7);
+    backdrop-filter: blur(10px);
+    transition: all 2s;
+}
+.container__card-1:hover .card-1{
+    transition: all 2s;
+    transform: scale(1.05);
+}
+.container__card-1:hover::before,
+.container__card-1:hover::after{
+    transition: all 2s;
+    transform: skewX(0);                 /*наклон*/
+
+}
+
+.container__card-1::before,
+.container__card-1::after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 0;
+    left: 25%;
+    width: 50%;
+    height: 100%;
+    border-radius: 1rem;
+    transform: skewX(1600deg);
+    transition: all 2s;
+}
+
+.card__1_gradient::before,  /*градиенты*/
+.card__1_gradient::after {
+    background: linear-gradient(135deg, rgb(255, 0, 111) 0%, rgb(225, 255, 0) 50%, rgb(34, 255, 0) 100%);
+}
+.card__2_gradient::before,
+.card__2_gradient::after {
+    background: linear-gradient(-45deg, rgb(68, 255, 0) 0%, rgb(54, 124, 0) 41%, rgb(11, 47, 0) 100%);
+}
+.card__3_gradient::before,
+.card__3_gradient::after {
+    background: linear-gradient(-45deg, rgb(255, 0, 47) 0%, rgb(49, 56, 255) 41%, rgb(0, 234, 255) 100%);
+    background: url(img/matrix6.jpg); 
+}
+.container__card-1::after {  /*размытие   для карт первого выбора*/
+    filter: blur(25px);
+}
+
+
+
+
+
+.square-1{                          /*квадратики*/ 
+    position: absolute;
+    border-radius: 1rem;
+    background-color: rgba(67, 71, 78, 0.4);
+    opacity: 0;
+    transition: opacity 1s;
+    animation: square_header 5s calc(-1s * var(--i)) linear infinite;
+}
+.square-1:nth-child(1){
+    width: 5rem;
+    height: 5rem;
+    top: 10%;
+    left: 15%;
+}
+.square-1:nth-child(2){
+    width: 7rem;
+    height: 7rem;
+    top: 65%;
+    right: 10%;
+}
+.container__card-1:hover .square-1{
+    opacity: 1;
+    transition: opacity 1s;
+}
+@keyframes square_header {
+    0%, 100%{
+        transform: translateY(-2rem);
+    }
+    50%{
+        transform: translateY(2rem);
+    }
+}
+
+
+
+.card__button {                               /*кнопка подробнее*/
+    max-width: 40%;
+    margin: 1rem 0 0 0;
+    background-color: azure;
+    padding: 0.5rem;
+    color: black;
+    font-weight: 700;
+    border-radius: 0.5rem;
+}
+
+.container_gradient{                     /*2 контейнер*/
+    backdrop-filter: blur(10px);
+    background: linear-gradient(235deg, rgb(255, 0, 247) 0%, rgb(0, 255, 255) 50%, rgb(0, 255, 4) 100%);
+}
+
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+
+.container__cards:hover .card-2{            /*заготовка карт 2 контейнера*/
+    backdrop-filter: blur(10px);
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+.container__cards:hover .card-2{
+    backdrop-filter: blur(10px);
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+.container__cards .card-2:hover{
+    filter: blur(0);
+    transform: scale(1.05);
+    opacity: 1;
+}
+.card-2 .card__title{
+    margin: 2rem 0 6rem 0;
+    font-size: 5rem;
+}
+.card-2{
+    flex: 0 1 25%;
+    overflow: hidden;
+    align-content: center;
+    background-color: white;
+    transition: transform 1.5s;
+    backdrop-filter: blur(10px);
+}
+.card-2 .card__desc{
+    color: black;
+}
+.card-2 .card__button{
+    margin-top: 1rem;
+    color: white;
+}
+.card-2 .card__title::before{
+    content: '';
+    position: absolute;
+    top: -13rem;
+    left: -10%;
+    width: 120%;
+    height: 26rem;
+    z-index: -1;
+    border-radius: 50%;
+}
+.card-yellow .card__button,
+.card-yellow .card__title::before{
+    background-color: #d0d627;
+}
+.card-pink .card__button,
+.card-pink .card__title::before{
+    background-color: #ff8a9f;
+}
+.card-purple .card__button,
+.card-purple .card__title::before{
+    background-color: #ce1caa;
+}
+.card-2:hover{
+    transform: scale(1.05);
+    transition: transform 1.5s;
+}
+.card__button-2{
+    align-self: center;
+}
+
+.card-3{
+    overflow: hidden;
+    position: relative;
+    flex: 0 1 25%;
+    z-index: 15;
+    padding: 6rem 1rem;
+    border-radius: 0;
+    background-color: black;
+    transition: all 2s;
+}
+.card-3:before{                             /*движение по краям*/
+    position: absolute;
+    content: '';
+    top: -50%;
+    left: 25%;
+    width: 50%;
+    height: 200%;
+    z-index: -1;
+    background-color: rgb(26, 255, 0);
+    filter: blur(10px);
+    opacity: 0;
+    animation: border_light 0.5s infinite linear;
+}
+@keyframes border_light {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+.card-3:after{
+    position: absolute;
+    content: '';
+    top: 0.2rem;
+    left: 0.2rem;
+    width: calc(100% - 0.4rem);
+    height: calc(100%  - 0.4rem);
+    z-index: -1;
+    background: url(img/matrix6.jpg);   /*фтото как фон тела  сайта*/
+}
+.card-3:hover{
+    transform: scale(1.05);
+    filter: blur(0);
+    transition: all 2s;
+}
+.container__cards-3:hover .card-3{
+    filter: blur(5px);
+    opacity: 0.5;
+}
+.container__cards-3 .card-3:hover{
+    filter: blur(0);
+    opacity: 1;
+}
+.container__cards-3 .card-3:hover::before{
+    opacity: 1;
+}
+
+
+.container__login{                               /*контейнер для логина*/
+    position: relative;
+}
+@keyframes square_login {
+    0%, 100%{
+        transform: translateY(-2rem);
+    }
+    50%{
+        transform: translateY(2rem);
+    }
+}
+
+
+.form{                                    /*регистрация*/
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(67, 71, 78, 0.7);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(73, 73, 73, 0.5);
+    border-radius: 1rem;
+    /* box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1); */
+    max-width: 40%;
+    margin: 5rem auto 2rem auto;
+    padding: 3rem 2rem;
+}
+
+
+.title__login{
+    position: relative;
+    font-size: 2rem;
+    margin: 0 0 2rem 0;
+}
+.title__login::before{
+    position: absolute;
+    content: '';
+    top: 2.1rem;
+    left: 0;
+    height: 0.3rem;
+    width: 5.5rem;
+    border-radius: 2px;
+    background-color: white;
+}
+.input__box{
+    margin: 1rem 0;
+    width: 100%;
+}
+.input__box input{
+    font-size: 1.5rem;
+    color: rgba(231, 231, 231, 1);
+    background-color: rgba(141, 141, 141, 0.5);
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
+.input__box input::placeholder{
+    font-size: 1.5rem;
+    color: rgba(231, 231, 231, 1);
+}
+.input__box input[type="submit"]{
+    cursor: pointer;
+    max-width: 40%;
+    background-color: white;
+    font-weight: 700;
+    color: rgb(67, 71, 78);
+}
+.forget{
+    font-size: 1.2rem;
+    color: white;
+    margin: 0.2rem 0;
+}
+.forget a{
+    color: orange;
+}
+.square-2{                             /*регистрация*/
+    position: absolute;
+    border-radius: 1rem;
+    background-color: rgba(67, 71, 78, 0.7);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(73, 73, 73, 0.5);
+    animation: square_login 10s calc(-1s * var(--i)) linear infinite;
+}
+.square-2:nth-child(2){
+    top: 17%;
+    right: 27%;
+    width: 5rem;
+    height: 5rem;
+}
+.square-2:nth-child(3){
+    top: 50%;
+    left: 24%;
+    width: 7rem;
+    height: 7rem;
+    z-index: 2;
+}
+.square-2:nth-child(4){
+    top: 20%;
+    left: 45%;
+    width: 4rem;
+    height: 4rem;
+}
+.square-2:nth-child(5){
+    top: 85%;
+    right: 45%;
+    width: 4.5rem;
+    height: 4.5rem;
+}
+.square-2:nth-child(6){
+    top: 70%;
+    right: 27%;
+    width: 3rem;
+    height: 3rem;
+    z-index: 2;
+}
+
+
+
+.container__buttons {                      /*иконки*/
+    display: flex;
+    justify-content: space-around;
+}
+.container__button {
+    position: relative;
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0.7rem;
+    overflow: hidden;
+    z-index: 1;
+    background: #202731;
+    box-shadow: 0 0 20px 1px #111214;
+}
+.container__button::before {
+    position: absolute;
+    content: '';
+    top: -120%;
+    left: 0;
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(-45deg, rgb(98, 255, 0) 0%, rgb(0, 98, 255) 50%, rgb(246, 255, 0) 100%);
+    z-index: -1;
+    transition: all 1.5s;
+    border-radius: 50%;
+    filter: blur(5px);
+}
+.container__button:hover::before {
+    top: 0%;
+    transition: all 1.5s;
+}
+.button {
+    justify-self: center;
+    align-self: center;
+}
+.button__image{
+    width: 100%;
+    height: auto;
+}
+
+
+@media (max-width:1300px) {
+    .container {
+        max-width: 970px;
+    }
+    .card__button{
+        max-width: 50%;
+    }
+    .form{
+        max-width: 600px;
+    }
+
+    .square-2:nth-child(3){
+        top: 50%;
+        left: 17%;
+        width: 7rem;
+        height: 7rem;
+        z-index: 2;
+    }
+    .square-2:nth-child(6){
+        top: 70%;
+        right: 20%;
+        width: 3rem;
+        height: 3rem;
+        z-index: 2;
+    }
+}
+
+@media (max-width:992px) {
+    .container {
+        max-width: 750px;
+    }
+    .card__button{
+        max-width: 60%;
+    }
+    .input__box input[type="submit"]{
+        max-width: 50%;
+    }
+    .form{
+        max-width: 500px;
+    }
+
+    .square-2:nth-child(2){
+        top: 20%;
+        right: 20%;
+        width: 5rem;
+        height: 5rem;
+    }
+    .square-2:nth-child(3){
+        top: 50%;
+        left: 10%;
+        width: 7rem;
+        height: 7rem;
+        z-index: 2;
+    }
+    .square-2:nth-child(4){
+        top: 25%;
+        left: 45%;
+        width: 4rem;
+        height: 4rem;
+    }
+    .square-2:nth-child(5){
+        top: 85%;
+        right: 45%;
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    .square-2:nth-child(6){
+        top: 70%;
+        right: 13%;
+        width: 3rem;
+        height: 3rem;
+        z-index: 2;
+    }
+}
+
+@media (max-width:767px) {
+    .container{
+        max-width: none;
+    }
+    .container__card{
+        flex: 1 1 100%;
+        margin: 1rem 0;
+    }
+    .card-2{
+        margin: 1rem 0;
+        flex: 1 1 100%;
+    }
+    .card-3{
+        flex: 1 1 100%;
+    }
+    .card__button{
+        max-width: 100%;
+    }
+    .container__buttons{
+        flex-wrap: wrap;
+    }
+    .container__buttons a{
+        margin: 0.5rem;
+    }
+
+    .square-1:nth-child(1){
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .square-1:nth-child(2){
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .square-2:nth-child(2),
+    .square-2:nth-child(3),
+    .square-2:nth-child(4),
+    .square-2:nth-child(5),
+    .square-2:nth-child(6)
+    {
+        display: none;
+    }
+}
+
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+
+
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+body{
+    background-color: #3a4350;
+    color: aliceblue;
+}
+
+.title{
+    text-align: center;
+    margin: 2rem 0;
+}
+.title_h1{
+    font-size: 5rem;
+}
+.title_h2{
+    font-size: 4rem;
+}
+
+
+
+
+
+
+.card__desc {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

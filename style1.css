@@ -1,0 +1,177 @@
+body {
+    background-color:rgb(196, 255, 237);
+    
+}
+custom { 
+   font-family: Courier;
+   color: cyan;
+   font-weight: 1000;
+   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+   }
+
+   
+p :first-child{  /* все дети */
+    line-height: 1;
+    color: rgb(72, 255, 0);
+}
+
+h1 {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font: weight 10px;;
+}
+h2:first-of-type {  /* первый из детей */
+    line-height: 1;
+    color: rgb(255, 255, 255);
+  }
+
+h3 {
+    color: rgb(142, 58, 58);
+}
+
+h7 {
+    font-style: italic;
+    text-align: center;
+    color: rgb(0, 4, 255);
+    font-weight: 1000;
+    letter-spacing: 5px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.buttonStyle {
+    font-family: Courier;
+    color: cyan;
+    font-weight: 1000;
+    font-size: x-large;
+}
+.testStyleClass1 {
+    width: 200px; 
+    background: #ccc;
+    padding: 5px;
+    padding-right: 20px; 
+    border: solid 1px black; 
+    float: center;
+}
+.testStyleClass2 {
+    width: 200px; 
+    background: #fc0; 
+    padding: 5px; 
+    border: solid 1px black; 
+    float: left; 
+}
+
+.center {
+   
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+    
+}
+    
+
+
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
+.space { 
+    display: block;
+ padding: 20px; /* Поля */
+ background: #E5D3BD; /* Цвет фона */
+ border: 2px solid #E81E25; /* Параметры рамки */
+}
+
+
+.special{
+    font-family: 'Bungee Spice', cursive;
+}
+
+a {
+    text-decoration: none; /*убираем подчеркивание текста ссылок*/
+    color:coral;
+}
+    a:link {
+     color: #0000d0; /* Цвет ссылок */
+     padding: 2px; /* Поля вокруг текста */ 
+    }
+    a:hover {
+     background: #ff00d9; /* Цвет фона под ссылкой */ 
+     color: rgb(255, 255, 0); /* Цвет ссылки */ 
+    } 
+    a:visited {
+        color: #900060; /* Цвет посещенных ссылок */
+    }
+    a:active {
+        color: rgb(0, 255, 81); /* Цвет активной ссылки */  
+    }  
+
+
+ 
+        /* для колонок и их заголовков */
+         #header1,  #col1 { 
+             width: 300px; /* Ширина колонок */
+            padding: 5px; /* Поля вокруг текста */
+            margin-left: 5px; /* Отступ слева */
+            margin-top: 2px; /* Отступ сверху */
+            float: left; /* Состыковка колонок по горизонтали */
+            border: 1px solid black; /* Рамка вокруг слоя */
+            font-family: Verdana, Arial, sans-serif; /* Рубленый шрифт */
+            font-weight: bold; /* Жирное начертание текста заголовка */
+            font-size: 80%; /* Размер шрифта */
+            color: white; /* Цвет текста заголовка */
+           }
+           /* для колонок */
+           #col1 { 
+            font-family: "Times New Roman", Times, serif; /* Шрифт с засечками */
+            font-size: 100%; /* Размер шрифта */
+            font-weight: normal; /* Нормальное начертание */
+            color: black; /* Цвет текста */
+           } 
+         
+           /* Цвет фона каждого слоя */
+           #header1 { background: #B38541; }
+           
+           #col1 { background: #EBE0C5; }
+           
+         
+           .container { 
+             clear: both;  /* Отменяет действие float */ 
+           }
+
+
+
+
+
+.articles > h3 {
+    text-align: center;
+}
+
+
+
+
+.articles h3 {
+    text-align: center;
+}
+
+.sidebar h3 {
+    color: darkred;
+}
+
+.example-element {
+    background-color: deepskyblue;
+    border: 15px solid blue;
+    height: 300px;
+    width: 300px;
+
+  }
+
+
+
+
+
+
+     

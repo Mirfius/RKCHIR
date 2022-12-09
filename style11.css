@@ -1,0 +1,214 @@
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+
+    background: url(img/matrix6.jpg);   /*фтото как фон тела  сайта*/
+    color: aliceblue;
+    background-color: #2b2c2f;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+body{
+    background-color: beige;
+}
+
+.title{
+    text-align: center;
+}
+.title_h2{
+    margin: 1rem 0 2rem 0;
+    font-size: 3rem;
+}
+
+.header{
+    padding: 1rem;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    background-color: rgb(77, 75, 98);
+    border-radius: 1.5rem;
+    align-items: center;
+}
+.logo {
+    width: 4rem;
+}
+.notification {
+    min-width: 15rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.img__notification {
+    cursor: pointer;
+    align-self: end;
+    width: 4rem;
+}
+.text__notification {
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    opacity: 0;
+}
+.active{
+    opacity: 1;
+}
+.counter{
+    position: absolute;
+    background-color: rgb(229, 4, 184);
+    text-align: center;
+    padding-top: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+.text__notification li{
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: rgb(77, 75, 98);
+}
+
+.container {
+    background-color: rgb(77, 75, 98);
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.container__array {
+    background-color: rgb(229, 4, 184);
+    margin: 0 auto;
+    max-width: 1200px;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-auto-flow: dense;
+    gap: 5px;
+    grid-template-columns: repeat(6, 1fr);
+    
+}
+.container_button {
+    background-color: rgb(59, 46, 57);
+    margin: 0 auto;
+    max-width: 1200px;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-auto-flow: dense;
+    gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+}
+.card {
+    padding: 1rem;
+    margin: 0 1rem;
+    flex: 1 1 25%;
+}
+.card2{
+    flex: 1 1 10%;
+}
+.button{
+    font-size: 1rem;
+    border-radius: 1rem;
+    margin: 0 1rem;
+    flex: 1 1 20%;
+    padding: 1rem;
+    background-color: rgb(229, 4, 184);
+}
+img{
+    width: 100%;
+}
