@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style13.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        
+        <div id="contents">
+            <p>
+                <div class="container">
+                    <a class="link" href="index.html">index1.html</a>
+                    <br><a class="link" href="index2.html">index2.html</a>
+                </div>
+            </p>
+        </div>
+       
+        <p><img id="largeImg" src="img/morfius.jpg" alt="Large image"></p>
+        <div>
+            <ul id="thumbs">
+                <li class="flex">
+                    <a href="img/matrix.jpg"><img src="img/matrix.jpg"></a>
+                </li>
+                <li class="flex">
+                    <a href="img/matrix2.jpg"><img src="img/matrix2.jpg"></a>
+                </li>
+                <li class="flex">
+                    <a href="img/matrix3.jpg"><img src="img/matrix3.jpg"></a>
+                </li>
+                <li class="flex">
+                    <a href="img/matrix4.png"><img src="img/matrix4.png"></a>
+                </li>
+                <li class="flex">
+                    <a href="img/matrix5.jpg"><img src="img/matrix5.jpg"></a>
+                </li>
+            </ul>
+        </div>
+        
+        <div>
+            <ul id="ul">
+                <li>Text1</li>
+                <li>Text2</li>
+                <li>Text3</li>
+                <li>Text4</li>
+                <li>Text5</li>
+            </ul>
+        </div>
+        
+        <div id="slider" class="slider">
+            <div class="thumb"></div>
+        </div>
+        <div id="myFigure" all_cost=0 ondrop="drop(event)" ondragover="allowDragAndDrop(event)">
+        <div >
+            <img src="img/shopping-and-commerce.png">
+        </div>
+        </div>
+
+        <div class="coortdinate"></div>
+
+        <div class = "magaz">
+            <div class = "pane">
+                <h3>
+                        цена = 10
+                </h3>
+                <img id="1" cost=10 src="img/pil1.jpg" draggable="true" ondragstart="drag(event)" width="10%"
+                style="margin:10%;">
+            
+            </div>
+            <div class = "pane">
+                <h3>
+                        цена = 20
+                </h3>
+                <img class="pane" id="2" cost=20 src="img/pil2.jpg" draggable="true" ondragstart="drag(event)" width="10%"
+                style="margin:10%;">
+            </div> 
+        </div>
+            <img id="train" cost=10 src="img/pil1.jpg" draggable="true" ondragstart="drag(event)" width="10%"
+            style="margin:10%;">
+            
+            <img id="trait" cost=20 src="img/pil2.jpg" draggable="true" ondragstart="drag(event)" width="10%"
+            style="margin:10%;">
+
+
+
+           
+
+       
+    </main>
+    <script src="script13.js"></script>
+</body>
+
+</html>
